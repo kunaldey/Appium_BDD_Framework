@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <!-- <suite name="ParallelExecution" verbose="1" parallel="tests" thread-count="5"> -->
-<suite name="ParallelExecution" verbose="1" parallel="tests" thread-count="5">
-
+<!-- <suite name="Sample Appium" verbose="1" parallel="tests" thread-count="5">-->
+<suite name="Sample Appium" verbose="1" parallel="tests" thread-count="5" configfailurepolicy="continue">  
+<!--     <listeners>
+        <listener class-name="com.cucumber.testng.examples.TestNGExecutionListener"></listener>
+    </listeners> -->
 	<test name="Calculator">
 		<parameter name="port" value="4723" />
 		<parameter name="device" value="0715f762c2ab2f3a" />
@@ -10,13 +13,22 @@
 		<!--  <parameter name="platformName" value="Android" />
 		<parameter name="sleep" value="1000" />
 		<parameter name="Parallel" value="Yes" /> -->
-		<classes>
-			<class name="com.project.test.testEbay">
-				<methods>
+<!-- 		<classes>
+		   	<class name="com.project.setup.testSetup">
+		   	</class>
+		    <class name="com.project.setup.runEbay">
+			<class name="com.project.glue.testEbay">
+ 				<methods>
 				    <include name="eBayLogin" />
 				</methods>
 			</class>	   
-		</classes>
+		</classes> -->
+<!-- 		<packages>
+      		<package name="com.project.setup" />
+   		</packages> -->
+   		<classes>
+ 		    <class name="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+		</classes>   		
 	</test>
 
 	<test name="Calculator2">
@@ -26,28 +38,37 @@
 		<!--  <parameter name="platformName" value="Android" />
 		<parameter name="sleep" value="1000" />
 		<parameter name="Parallel" value="Yes" /> -->
-		<classes>
-			<class name="com.project.test.testEbay">
-				<methods>
+<!-- 		<classes>
+ 		    <class name="com.project.setup.testSetup">
+			</class>		        
+		    <class name="com.project.setup.runEbay">
+			<class name="com.project.glue.testEbay">
+ 				<methods>
 				    <include name="eBayLogin" />
 				</methods>
 			</class>	   
+		</classes> -->
+<!-- 		<packages>
+      		<package name="com.project.setup" />
+   		</packages>	 -->
+   		<classes>
+ 		    <class name="cucumber.api.testng.AbstractTestNGCucumberTests"/>
 		</classes>
 	</test>
 	
-	<test name="Calculator3">
+<!-- 	<test name="Calculator3">
 		<parameter name="port" value="4727" />
 		<parameter name="device" value="1e7245ec" />
 		<parameter name="Parallel" value="Yes" />
-		<!--  <parameter name="platformName" value="Android" />
+		 <parameter name="platformName" value="Android" />
 		<parameter name="sleep" value="1000" />
-		<parameter name="Parallel" value="Yes" /> -->
+		<parameter name="Parallel" value="Yes" />
 		<classes>
-			<class name="com.project.test.testEbay">
+			<class name="com.project.glue.testEbay">
 				<methods>
 				    <include name="eBayLogin" />
 				</methods>
 			</class>	   
 		</classes>
-	</test>
+	</test> -->
 </suite> 

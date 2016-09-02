@@ -1,4 +1,4 @@
-package com.project.test;
+package stepdefinition;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterTest;
@@ -11,7 +11,7 @@ public class testCalc extends testSetup {
 	@Test
 	public void Sum() throws Exception {
 
-		driver.findElement(By.id("com.sec.android.app.popupcalculator:id/bt_02")).click();
+/*		driver.findElement(By.id("com.sec.android.app.popupcalculator:id/bt_02")).click();
 		driver.findElement(By.id("com.sec.android.app.popupcalculator:id/bt_add")).click();
 		driver.findElement(By.id("com.sec.android.app.popupcalculator:id/bt_05")).click();
 		driver.findElement(By.id("com.sec.android.app.popupcalculator:id/bt_equal")).click();
@@ -21,12 +21,12 @@ public class testCalc extends testSetup {
 
 		// Get result from result text box.
 		String result = driver.findElement(By.className("android.widget.EditText")).getText();
-		System.out.println("Number sum result is : " + result);
+		System.out.println("Number sum result is : " + result);*/
 
 	}
 
-	@AfterTest
+/*	@AfterTest
 	public void End() {
 		driver.quit();
-	}
+	}*/
 }
